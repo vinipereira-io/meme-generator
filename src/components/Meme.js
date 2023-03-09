@@ -1,9 +1,13 @@
-import MemesData from '../memesData.js'
+import memesData from '../memesData.js'
 
 function Meme() {
-    function getImage() {
-        console.log(MemesData.data.memes[Math.floor(Math.random() * 100)].url);
+    function getMemeImage() {
+        const memesArray = memesData.data.memes
+        const randomNumber = Math.floor(Math.random() * memesArray.length)
+        setMemeImage(memesArray[randomNumber].url);
     }
+
+    const [memeImage, setMemeImage] = React.useState('')
 
     return (
         <div className='meme'>
