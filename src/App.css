@@ -72,9 +72,11 @@ button {
 }
 
 .meme {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    align-self: center;
 }
 
 .meme--inputs {
@@ -82,4 +84,10 @@ button {
     flex-direction: row;
     column-gap: 20px;
     justify-content: space-between;
+}
+
+.meme--memeImage {
+    max-width: 100%;
+    height: auto;
+    align-self: center;
 }

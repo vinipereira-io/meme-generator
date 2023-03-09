@@ -1,4 +1,5 @@
-import memesData from '../memesData.js'
+import memesData from '../memesData.js';
+import React from 'react';
 
 function Meme() {
     function getMemeImage() {
@@ -15,7 +16,8 @@ function Meme() {
                 <input type='text' placeholder='Top text'></input>
                 <input type='text' placeholder='Bottom text'></input>
             </div>
-            <button onClick={getImage}>Get a new meme image</button>
+            <button onClick={getMemeImage}>Get a new meme image</button>
+            <img src={memeImage} className='meme--memeImage' />
         </div>
     )
 }
